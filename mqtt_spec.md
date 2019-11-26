@@ -18,6 +18,7 @@ The contents of this message are as follows:
 {
     "long_name": "<full name of the platform>",
     "platform_types": ["list", "of types characterizing the platform", "in decending oder of specificity"],
+    "url": "<web link for more information about the platform>",
     "contact": {
         "name": "<name of contact>",
         "email": "<email of contact>"
