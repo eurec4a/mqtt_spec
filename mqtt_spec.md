@@ -12,6 +12,8 @@ Platforms are assets which may move independently throughout the world.
 This includes ships, aircraft, drones, gliders, drifter, balloons and so on.
 Platforms are identified by a unique `<platform id>`.
 Each platform gets its own namespace unter `platform/<platform id>`.
+
+#### meta
 A platform MUST publish a retained message containing a general description of itself under `platform/<platform id>/meta`.
 The contents of this message are as follows:
 ```json
@@ -28,6 +30,28 @@ The contents of this message are as follows:
 Platforms should send as many information as possible.
 If any information is not available, the field should be ommitted.
 
+The `platform_types` can be filled with an arbitrary amount of names describing the kind of the platform.
+The most specific names must be written first.
+If any of the following names matches the type of the platform, it should be used exactly as in this list:
+
+* buoy
+* coastal vessel
+* deep-sea vessel
+* drifter
+* glider
+* ocean glider
+* wave glider
+* mooring
+* plane
+* saildrone
+* ship
+* station
+* ground station
+
+Other names may be used as well.
+It may however be a good idea to add those names to this list.
+
+#### location
 Each platform SHOULD publish messages identifyig its location.
 The contents of this message are as follows:
 ```json
