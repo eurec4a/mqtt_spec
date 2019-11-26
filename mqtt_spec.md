@@ -25,6 +25,8 @@ The contents of this message are as follows:
     }
 }
 ```
+Platforms should send as many information as possible.
+If any information is not available, the field should be ommitted.
 
 Each platform SHOULD publish messages identifyig its location.
 The contents of this message are as follows:
