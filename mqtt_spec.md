@@ -16,11 +16,11 @@ A platform MUST publish a retained message containing a general description of i
 The contents of this message are as follows:
 ```json
 {
-    "long_name": <full name of the platform>,
-    "platform_types": [list of types characterizing the platform in decending oder of specificity],
+    "long_name": "<full name of the platform>",
+    "platform_types": ["list", "of types characterizing the platform", "in decending oder of specificity"],
     "contact": {
-        "name": <name of contact>,
-        "email": <email of contact>
+        "name": "<name of contact>",
+        "email": "<email of contact>"
     }
 }
 ```
@@ -29,14 +29,14 @@ Each platform SHOULD publish messages identifyig its location.
 The contents of this message are as follows:
 ```json
 {
-    "time": <time of position acquisition>,
-    "lat": <latitude in decimal WGS84 coordinates, degrees, north positive>,
-    "lon": <longitude in decimal WGS84 coordinates, degrees, east positive>,
-    "heading": <clockwise heading of the platform, degrees, north is 0>,
-    "ground_speed": <platform speed over ground, unit: m/s>,
-    "press_alt": <pressure altitude, unit: hPa>,
-    "gps_msl_alt": <altitude in WGS84 coordinates, unit: m>,
-    "vert_velocity": <vertical velocity, unit: m/s>
+    "time": "<time of position acquisition>",
+    "lat": "<latitude in decimal WGS84 coordinates, degrees, north positive>",
+    "lon": "<longitude in decimal WGS84 coordinates, degrees, east positive>",
+    "heading": "<clockwise heading of the platform, degrees, north is 0>",
+    "ground_speed": "<platform speed over ground, unit: m/s>",
+    "press_alt": "<pressure altitude, unit: hPa>",
+    "gps_msl_alt": "<altitude in WGS84 coordinates, unit: m>",
+    "vert_velocity": "<vertical velocity, unit: m/s>"
 }
 ```
 Platforms should send as many information as possible.
