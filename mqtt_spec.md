@@ -61,10 +61,12 @@ The contents of this message are as follows:
     "lon": "<longitude in decimal WGS84 coordinates, degrees, east positive>",
     "heading": "<clockwise heading of the platform, degrees, north is 0>",
     "ground_speed": "<platform speed over ground, unit: m/s>",
-    "press_alt": "<pressure altitude, unit: hPa>",
-    "gps_msl_alt": "<altitude in WGS84 coordinates, unit: m>",
+    "press_alt": "<pressure altitude, unit: feet>",
+    "gps_msl_alt": "<altitude above mean sea level, unit: m>",
+    "wgs84_alt": "<altitude in WGS84 coordinates, unit: m>",
     "vert_velocity": "<vertical velocity, unit: m/s>"
 }
 ```
 Platforms should send as many information as possible.
 If any information is not available, the field should be ommitted.
+The definition of the fields above are influenced by [IWG1](https://archive.eol.ucar.edu/raf/Software/iwgadts/IWG1_Def.html) and should be kept consistent with that definition if possible.
