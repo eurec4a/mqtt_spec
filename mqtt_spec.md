@@ -22,6 +22,7 @@ The contents of this message are as follows:
     "planet_id": "<identifier for the PLANET system>",
     "platform_types": ["list", "of types characterizing the platform", "in decending oder of specificity"],
     "url": "<web link for more information about the platform>",
+    "urls": [{"list of urls": "as above"}],
     "contact": {
         "name": "<name of contact>",
         "email": "<email of contact>",
@@ -55,7 +56,14 @@ If any of the following names matches the type of the platform, it should be use
 Other names may be used as well.
 It may however be a good idea to add those names to this list.
 
-`contacts` with only one item should be preferred over `contact`.
+While contact tags may also be chosen freely, reusing others is a good idea as well.
+Known contact tags are:
+
+* `dp` - data provider
+* `fx` - flight management
+* `pi` - principal investigator
+* `pm` - project management
+* `sc` - scientist
 
 #### location
 Each platform SHOULD publish messages identifying its location.
