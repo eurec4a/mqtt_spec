@@ -19,12 +19,16 @@ The contents of this message are as follows:
 ```json
 {
     "long_name": "<full name of the platform>",
+    "planet_id": "<identifier for the PLANET system>",
     "platform_types": ["list", "of types characterizing the platform", "in decending oder of specificity"],
     "url": "<web link for more information about the platform>",
     "contact": {
         "name": "<name of contact>",
-        "email": "<email of contact>"
-    }
+        "email": "<email of contact>",
+        "tags": ["list", "of tags", "indicating involvement"]
+    },
+    "contacts": [{"list of concacts": "as above"}],
+    "misc": "<miscelaneous information to the platform>"
 }
 ```
 Platforms should send as many information as possible.
@@ -51,6 +55,8 @@ If any of the following names matches the type of the platform, it should be use
 Other names may be used as well.
 It may however be a good idea to add those names to this list.
 
+`contacts` with only one item should be preferred over `contact`.
+
 #### location
 Each platform SHOULD publish messages identifying its location.
 The contents of this message are as follows:
@@ -64,9 +70,12 @@ The contents of this message are as follows:
     "press_alt": "<pressure altitude, unit: feet>",
     "gps_msl_alt": "<altitude above mean sea level, unit: m>",
     "wgs84_alt": "<altitude in WGS84 coordinates, unit: m>",
-    "vert_velocity": "<vertical velocity, unit: m/s>"
+    "vert_velocity": "<vertical velocity, unit: m/s>",
+    "type": "fixed"
 }
 ```
 Platforms should send as many information as possible.
 If any information is not available, the field should be omitted.
 The definition of the fields above are influenced by [IWG1](https://archive.eol.ucar.edu/raf/Software/iwgadts/IWG1_Def.html) and should be kept consistent with that definition if possible.
+
+`type` can be set to "fixed" to indicate that the platform is not intended to move.
