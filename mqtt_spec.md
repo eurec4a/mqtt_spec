@@ -6,6 +6,8 @@ The [EUREC4A](https://www.eurec4a.eu) MQTT broker is intended to exchange variou
 
 ## Messages
 All messages are encoded as JSON. Timestamps are given in UTC and encoded according to [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601). Any physical quantities must be given in terms of the appropriate [SI base units](https://en.wikipedia.org/wiki/SI_base_unit) if not designated otherwise.
+Pleas note that in this document, all values are given in "" marks, because otherwise JSON code formatters will complain.
+If the values are actually numbers, they SHOULD NOT be entered as strings, but as the appropriate JSON type.
 
 ### Platforms
 Platforms are assets which may move independently throughout the world.
