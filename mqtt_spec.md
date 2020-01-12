@@ -38,7 +38,7 @@ Platforms should send as many information as possible.
 If any information is not available, the field should be omitted.
 
 The `platform_types` can be filled with an arbitrary amount of names describing the kind of the platform.
-The most specific names must be written first.
+The most specific names must be written first. This is primarity intended to facilitate the selection of display icons. An icon selection algorithm can walk through this list and display an icon corresponding to the first item in this list.
 If any of the following names matches the type of the platform, it should be used exactly as in this list:
 
 * buoy
