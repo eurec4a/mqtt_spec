@@ -89,4 +89,45 @@ Platforms should send as many information as possible.
 If any information is not available, the field should be omitted.
 The definition of the fields above are influenced by [IWG1](https://archive.eol.ucar.edu/raf/Software/iwgadts/IWG1_Def.html) and should be kept consistent with that definition if possible.
 
-`type` can be set to "fixed" to indicate that the platform is not intended to move.
+`type` can be set to "fixed" to indicate that the platform is not intended to move, otherwise `type` should be ommitted.
+
+#### temperature
+If the platform provides temperature readings, they SHOULD be published to `platform/<platform id>/temperature` with the following content:
+
+```json
+{
+    "time": "<time of measurement>",
+    "ambient": "<ambient air temperature>",
+    "water": "<water temperature>"
+}
+```
+
+`time` is mandatory and describes the time of measurement as iso formatted UTC time, the other fields describe temperature readings in Celsius and can be added as needed.
+It is possible to add other keys for other values as needed, but if one of the above matches your needs, please use them.
+
+#### pressure
+If the platform provides pressure readings, they SHOULD be published to `platform/<platform id>/pressure` with the following content:
+
+```json
+{
+    "time": "<time of measurement>",
+    "air": "<air pressure>"
+}
+```
+
+`time` is mandatory and describes the time of measurement as iso formatted UTC time, the other fields describe pressure readings in hPa and can be added as needed.
+It is possible to add other keys for other values as needed, but if one of the above matches your needs, please use them.
+
+#### wind
+If the platform provides wind measurements, they SHOULD be published to `platform/<platform id>/wind` with the following content:
+
+```json
+{
+    "time": "<time of measurement>",
+    "mag": "<magnitude in m/s>",
+    "dir": "<direction in degrees>",
+    "gusts": "<gust magnitude in m/s>"
+}
+```
+
+`time` is mandatory and describes the time of measurement as iso formatted UTC time, the other fields can be added as needed.
