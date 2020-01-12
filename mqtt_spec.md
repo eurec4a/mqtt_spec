@@ -31,6 +31,7 @@ The contents of this message are as follows:
         "tags": ["list", "of tags", "indicating involvement"]
     },
     "contacts": [{"list of concacts": "as above"}],
+    "expected_update_intervall": "<expected intervall of updates in seconds>",
     "misc": "<miscelaneous information to the platform>"
 }
 ```
