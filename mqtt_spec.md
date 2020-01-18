@@ -55,6 +55,8 @@ If any of the following names matches the type of the platform, it should be use
 * ship
 * station
 * ground station
+* satellite
+* predicted satellite
 
 Other names may be used as well.
 It may however be a good idea to add those names to this list.
